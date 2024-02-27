@@ -1,0 +1,32 @@
+.image-gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 25px;
+}
+
+.gallery-image {
+  width: 256px; /* Set the desired width for your images */
+  height: 256px; /* Set the desired height for your images */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.fullscreen-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}

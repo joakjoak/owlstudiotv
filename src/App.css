@@ -1,38 +1,394 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home,
+.services,
+.products,
+.works,
+.contact,
+.about,
+.sign-up {
   display: flex;
-  flex-direction: column;
+  height: 90vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.services {
+  background-image: url("../public/images/img-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
 }
 
-@keyframes App-logo-spin {
-  from {
+.products {
+  background-image: url("../public/images/img-1.jpg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.works {
+  background-image: url("../public/images/img-1.jpg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+.contact {
+  background-image: url("../public/images/img-1.jpg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.about {
+  background-color: #fff;
+  color: #000;
+  font-size: 100px;
+}
+
+.Title {
+  font-size: 60px;
+  font-weight: lighter;
+}
+
+.Subtitle {
+  margin-top: -15px;
+  font-size: 38px;
+  font-weight: lighter;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.credit-class {
+  padding-top: 25px;
+  font-size: 32px;
+  font-weight: lighter;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.container-sep {
+  display: flex;
+  justify-content: center;
+}
+
+.container-vid {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.separator {
+  border-top: 2px solid #000;
+  width: 75%; /* Adjust as needed */
+}
+
+.sign-up {
+  background-image: url("../public/images/img-8.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.container-core {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.container-core-pages {
+  place-items: center;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  padding-bottom: 25px;
+}
+
+.container-core image {
+  width: 80%;
+  height: 50%;
+  object-fit: cover; /* This ensures the image covers the container, preserving its aspect ratio */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-core-black {
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  background-color: #000;
+}
+
+.container-core-blank {
+  height: 100px;
+}
+
+.text-container-core {
+  padding: 20px;
+  text-align: justify;
+  border-right: 1px solid #ccc;
+  font-weight: lighter;
+  width: 100%;
+  font-size: 23px;
+}
+
+.usix {
+  width: 60%;
+}
+
+.uright {
+  border-left: 1px solid #ccc;
+}
+
+.leftie {
+  text-align: left;
+}
+
+.pages {
+  border-right: 0px;
+  padding: 0px;
+  margin-top: 25px;
+  color: #888;
+  width: 60%;
+}
+
+.image-container-core {
+  flex: 1;
+  padding: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.gallery-container {
+  margin-top: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+.group {
+  display: flex;
+  transition: transform 0.5s ease; /* Adjust the transition duration and easing as needed */
+}
+
+.group-item {
+  width: 100vw;
+}
+
+/* Add a class for the transitioning state */
+.group-transitioning {
+  transition: transform 0.5s ease; /* Adjust the transition duration and easing as needed */
+}
+
+.active {
+  opacity: 1;
+}
+
+.floating-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.left {
+  left: 20%; /* Adjust the left position as needed */
+}
+
+.right {
+  right: 20%; /* Adjust the right position as needed */
+}
+
+.floating-button:hover {
+  background-color: #555;
+}
+
+.contact-container {
+  margin-top: 25px;
+  width: 6cm;
+  height: 10cm;
+  position: relative;
+  border-right: 1px solid #ccc;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 50vh;
+  z-index: 1;
+}
+
+/* Circular image styles */
+.contact-circular-image {
+  width: 100%;
+  height: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+}
+
+.contact-circular-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire circle */
+}
+
+/* Separation line styles */
+.contact-separator {
+  margin-top: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  height: 2px;
+  background-color: #000; /* You can change the color as needed */
+  position: relative;
+}
+
+/* Text styles */
+.contact-text {
+  margin-top: 10px;
+  width: 95%;
+  height: 50%;
+  position: relative;
+  bottom: 0;
+  text-align: justify;
+  font-size: 14px;
+  padding-left: 10px; /* Add padding as needed */
+}
+
+.contact-title {
+  margin-top: 10px;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  text-align: justify;
+  font-size: 20px;
+  padding-left: 10px; /* Add padding as needed */
+}
+
+.overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1); /* White with some opacity */
+  z-index: 9999; /* Ensure it's on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #000000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite; /* Rotate infinitely */
+}
+
+/* Animation for the rotating circle */
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container-core {
+    display: grid;
+    width: 85%;
+  }
+
+  .container-core-black {
+    display: grid;
+    width: 85%;
+  }
+
+  .text-container-core {
+    border-right: 0px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+  }
+
+  .contact-container {
+    width: 100%;
+    border-right: 0px;
+    border-bottom: 1px solid #ccc;
+  }
+  .contact-circular-image {
+    width: 60%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    transform: translate(-0%, -50%);
+  }
+
+  .usix {
+    width: 100%;
+  }
+
+  .container-core-pages {
+    width: 75%;
+  }
+
+  .Title {
+    font-size: 35px;
+  }
+
+  .pages {
+    width: 80%;
+    border-bottom: 0px;
+  }
+
+  .usmall {
+    border-bottom: 0px;
+    border-left: 0px;
+  }
+
+  .Subtitle {
+    font-size: 27px;
+    color: #000;
   }
 }
